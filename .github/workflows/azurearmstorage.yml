@@ -23,5 +23,5 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-                        Get-AzVM --resourcegroupname "DAASNXTRG-US-EAST" -status
+                        az vm list-sizes -l westus
 
