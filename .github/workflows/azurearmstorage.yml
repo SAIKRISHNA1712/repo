@@ -1,22 +1,19 @@
-on: [push]
-
-name: AzureCLISample
-
-jobs:
-
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    
-    - name: Azure Login
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDS }}
-    
-    - name: Azure CLI script
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.0.72
-        inlineScript: |
-          az account show
-          az storage -h
+on: [push]	
+	name: AzureCLISample
+	jobs:
+	build-and-deploy:
+	runs-on: ubuntu-latest
+	steps:
+	- name: Azure Login
+	uses: azure/login@v1
+	with:
+	creds: ${{ secrets.AZURE_CREDS }}
+	- name: Azure CLI script
+	uses: azure/CLI@v1
+	with:
+	azcliversion: 2.0.72
+	inlineScript: |
+              New-AzResourceGroupDeployment -Name "EPISODE3" \
+            --ResourceGroupName "DAASNXTRG-US-EAST" \
+            --TemplateFile storage.json 
+            --TemplateParameterFile storage.parameters.json
