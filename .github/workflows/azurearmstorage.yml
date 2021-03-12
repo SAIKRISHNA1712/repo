@@ -23,5 +23,6 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-                        az vm list-sizes -l westus
+                        Az deployment group create --name StorageAccountDeployment --resoucre-group DAASNXTRG-US-EAST --template-file armtemplates/storage.json  --pareameters-file armtemplates/storage.parameters.json
+
 
