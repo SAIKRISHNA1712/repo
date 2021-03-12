@@ -23,4 +23,6 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            New-AzResourceGroupDeployment -Name "EPISODE3"  --ResourceGroupName "DAASNXTRG-US-EAST" --TemplateFile storage.json --TemplateParameterFile storage.parameters.json
+            $myResourceGroup="DAASNXTRG-US-EAST"
+            Get-AzVM $myResourceGroup -status
+
