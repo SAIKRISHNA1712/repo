@@ -23,5 +23,5 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-                        Get-AzVM DAASNXTRG-US-EAST -status
+                        Get-AzVM --resourcegroupname "DAASNXTRG-US-EAST" -status
 
