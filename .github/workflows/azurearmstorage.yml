@@ -26,5 +26,5 @@ jobs:
               az deployment group create \
                       --name DEMO3 \
                      --resource-group DAASNXTRG-US-EAST \
-                     --template-file storage.json \
+                     --template-file armtemplates/storage.json \
                      --parameters storageAccountType=Standard_GRS
