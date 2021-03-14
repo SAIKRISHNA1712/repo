@@ -23,8 +23,8 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-              az deployment group create \
-                      --name DEMO3 \
+                     az deployment group create \
+                     --name DEMO3 \
                      --resource-group DAASNXTRG-US-EAST \
                      --template-file armtemplates/storage.json \
                      --parameters storageAccountType=Standard_GRS
