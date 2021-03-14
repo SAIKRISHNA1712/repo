@@ -23,14 +23,9 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-<<<<<<< HEAD
-            az deployment group create \
+             az deployment group create \
             --name DEMO3 \
             --resource-group DAASNXTRG-US-EAST \
             --template-uri "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/101-storage-account-create/azuredeploy.json" \
             --parameters storageAccountType=Standard_GRS
-=======
-                        Az deployment group create --name StorageAccountDeployment --resoucre-group DAASNXTRG-US-EAST --template-file armtemplates/storage.json  --pareameters-file armtemplates/storage.parameters.json
 
-
->>>>>>> b16b43c5289305495a8170950913706c8b23abf6
